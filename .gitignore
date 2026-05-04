@@ -66,6 +66,17 @@ Desktop.ini
 *.backup
 *.bak
 
+# Office lock files (PowerPoint/Word/Excel)
+~$*
+
+# PowerPoint / Word source files (not suitable for git)
+*.pptx
+*.ppt
+*.docx
+*.doc
+*.xlsx
+*.xls
+
 # ============================================
 # Python (if used for plotting/analysis)
 # ============================================
