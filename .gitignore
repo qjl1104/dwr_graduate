@@ -1,0 +1,77 @@
+# ============================================
+# LaTeX build artifacts
+# ============================================
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.pyg
+*.run.xml
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.thm
+*.toc
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+
+# latexmk
+*.fdb_latexmk
+*.fls
+
+# minted / pygments
+_minted-*/
+*.pygstyle
+*.pygtex
+
+# chktex / lacheck
+*.chktex
+
+# Preserve final compiled PDFs (override the above patterns if needed)
+# The main thesis PDF and template preview PDF are intentionally tracked.
+!csuthesis_main.pdf
+!csuthesis_main_template.pdf
+!content/*.pdf
+!images/**/*.pdf
+
+# ============================================
+# OS / editor
+# ============================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+# TeXstudio / TeXworks
+*.backup
+*.bak
+
+# ============================================
+# Python (if used for plotting/analysis)
+# ============================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
