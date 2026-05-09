@@ -256,8 +256,8 @@
                 \makebox[6em][s]{一级学科}   & \makebox[14em]{\@priormajor}    \\
                 \makebox[6em][s]{二级学科}   & \makebox[14em]{\@minormajor}    \\
                 \else
-                \makebox[6em][s]{一级学科} & \makebox[14em]{\@priormajor}    \\
-                \makebox[6em][s]{二级学科}   & \makebox[14em]{\@minormajor}    \\
+                \makebox[6em][s]{专业学位类别} & \makebox[14em]{\@priormajor}    \\
+                \makebox[6em][s]{专业领域}   & \makebox[14em]{\@minormajor}    \\
                 \fi
 
                 \ifblindreview
@@ -329,8 +329,8 @@
                 \makebox[6em][s]{一级学科}   & \makebox[14em]{\@priormajor}    \\[6pt]
                 \makebox[6em][s]{二级学科}   & \makebox[14em]{\@minormajor}    \\[6pt]
                 \else
-                \makebox[6em][s]{一级学科} & \makebox[14em]{\@priormajor}    \\[6pt]
-                \makebox[6em][s]{二级学科}   & \makebox[14em]{\@minormajor}    \\[6pt]
+                \makebox[6em][s]{专业学位类别} & \makebox[14em]{\@priormajor}    \\[6pt]
+                \makebox[6em][s]{专业领域}   & \makebox[14em]{\@minormajor}    \\[6pt]
                 \fi
                 \makebox[6em][s]{研究方向}   & \makebox[14em]{\@interestmajor} \\[6pt]
                 \makebox[6em][s]{二级培养单位} & \makebox[14em]{\@department}    \\[6pt]
