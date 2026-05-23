@@ -52,12 +52,7 @@
 	L_{hard} = \mathcal{L}_{CE}(z^S, y_{true}) = - \sum_i y_{true, i} \log \left( \frac{\exp(z^S_i)}{\sum_j \exp(z^S_j)} \right)
 \end{equation}
 
-最终的联合蒸馏损失函数 $L_{Total}$ 定义为软硬损失的加权总和：
-\begin{equation}
-	L_{Total} = \alpha \cdot L_{hard} + (1 - \alpha) \cdot T^2 \cdot L_{soft}
-	\label{eq:distill_loss}
-\end{equation}
-其中，$\alpha \in [0, 1]$ 为权重平衡系数。软损失项乘以 $T^2$ 的目的是补偿 Softmax 分布中梯度量级随温度升高而按 $1/T^2$ 比例衰减的效应，使软、硬两部分损失在梯度反向传播时对参数更新的贡献维持在同一量级。
+联合蒸馏损失函数 $L_{Total}$ 采用式(\ref{eq:kd_loss})定义的联合损失函数形式，其中 $\alpha \in [0, 1]$ 为硬损失权重平衡系数。软损失项乘以 $T^2$ 的目的是补偿 Softmax 分布中梯度量级随温度升高而按 $1/T^2$ 比例衰减的效应，使软、硬两部分损失在梯度反向传播时对参数更新的贡献维持在同一量级。
 
 \subsection{基于知识蒸馏优化的量子时频分析神经网络实现}
 \label{sec:kd_implementation}
