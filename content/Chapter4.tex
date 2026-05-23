@@ -124,6 +124,8 @@
 
 为验证”经典-量子”知识蒸馏框架的效果，本节先建立覆盖离散分类准确性与连续概率分布稳定性的评估指标体系，再从训练过程、混淆矩阵、消融对比和底层机制等角度对实验数据加以分析。
 
+本章实验基于 Windows 11 平台，CPU 为 AMD Ryzen 9 7900X，内存 64 GB，无 GPU 加速；软件环境为 Python 3.12、PyTorch 2.7（CPU 版本）及 PennyLane 0.41（\texttt{default.qubit} 模拟器后端）。教师模型的预训练细节与音频预处理方案已在第 \ref{subsec:teacher_pretrain} 节中描述，此处不赘述。量子学生模型的优化器为 Adam（学习率 $1\times10^{-3}$），引入权重衰减 $5\times10^{-4}$ 及基于验证准确率的学习率衰减策略（ReduceLROnPlateau，衰减因子 0.5，容忍步数 5）。蒸馏温度 $T=7.225$ 与权重系数 $\alpha=0.563$ 经第 \ref{subsec:theoretical_analysis} 节描述的贝叶斯优化确定。在上述实验条件下，本节从以下维度对模型性能展开系统分析。
+
 \subsubsection{多维评估指标体系构建}
 \label{subsec:evaluation_metrics}
 
