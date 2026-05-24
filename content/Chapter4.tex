@@ -216,7 +216,7 @@
 \begin{equation}
     q'(k|x) = (1-\varepsilon) \delta_{k, y} + \varepsilon \cdot u(k)
 \end{equation}
-其中 $u(k) = 1/K$ 为类别上的均匀分布。对本任务 $K=2$ 的二分类情形，真实类别的目标概率为 $1 - \varepsilon/2$，相反类别的目标概率为 $\varepsilon/2$。此处采用 Szegedy 等人在实验中使用的 $\varepsilon=0.1$\citess{szegedy2016rethinking}。
+其中 $u(k) = 1/K$ 为类别上的均匀分布。对本任务 $K=2$ 的二分类情形，真实类别的目标概率为 $1 - \varepsilon/2$，相反类别的目标概率为 $\varepsilon/2$。此处采用 Sultan 等人在实验中使用的 $\varepsilon=0.1$\citess{sultan-2023-knowledge}。
 
 三种方法在相同训练配置下独立训练，唯一差异在于损失函数：量子时频分析神经网络采用标准二分类交叉熵损失；标签平滑方法用平滑后的软标签替换交叉熵中的硬标签；知识蒸馏方法采用第 \ref{subsec:loss_function} 节定义的联合损失函数。三者共用相同的音频预处理方式、数据集划分规则与同一量子时频分析神经网络学生架构（33 个可训练参数），以确保性能差异来自损失函数形式本身而非架构或数据。详细对比结果见表 \ref{tab:ablation_study}。
 
